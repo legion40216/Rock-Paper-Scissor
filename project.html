@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href=project.css />
+    <title>Rock paper and scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+  <div class="firstbox">
+      <div class="box1">
+          <h1>ROCK</h1>
+          <h1>PAPER</h1>
+          <h1>SCISSORS</h1>
+      </div>
+
+<div>
+<h1>BEST OF THREE</h1>
+
+<div class="circles_container">
+
+<div class="circles"></div>
+<div class="circles"></div>
+<div class="circles"></div>
+
+
+</div>
+
+</div>
+
+      <div class="box2">
+          <h1>score</h1>
+          <h1>0</h1>
+      </div>
+  </div>
+
+<div class="master_body">
+    
+<div class="rock_paper"  >
+  <div class="option_rock"  onclick="startgame(1)"  >
+    <img src="icon-rock.svg" alt="" width="70px;">
+    </div>
+
+
+<div class="option_paper"  onclick="startgame(2)">
+       <img src="icon-paper.svg" alt="" width="70px;">
+</div>
+
+</div>
+<div class="scissors_box" onclick="startgame(3)">
+<div>
+    <img src="icon-scissors.svg" alt="" width="70px;">
+</div>
+</div>
+
+</div>
+
+
+<div class="part2"> 
+
+  <div class="choice_wrapper">
+    <h1>YOU PICKED</h1>
+    <div class="player_select_box"></div>
+ </div>
+
+
+<div class="status">
+<h1>YOU WIN</h1>
+<button onclick="toggledisplay()">CONTINUE</button>
+</div>
+
+
+<div class="choice_wrapper" >
+  <h1>CPU PICKED</h1>
+  <div class="computer_select_box"></div>
+
+</div>
+  
+</div>
+
+<script src="project.js"></script>
+
+</body>
+</html>
