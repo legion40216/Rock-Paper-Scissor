@@ -13,7 +13,9 @@ body{
 }
 .firstbox{
     display: flex;
-    width: 700px;
+    width: 50%;
+    min-width: 350px;
+    max-width: 700px;
     border: oldlace solid 2px;
     padding: 20px;
     justify-content: space-between;
@@ -88,9 +90,13 @@ box-shadow:  0 6px rgb(220 46 78 / 80%), inset 0 1vmin rgb(0 0 0 / 20%);
     display: flex;
    
     justify-content: space-evenly;
-    width: 800px;
+    
+    width: 60%;
+  min-height: 200px;
+    max-width: 800px;
+align-items: center;
    padding: 25px;
-   
+ 
 }
 
 .master_body{
@@ -98,7 +104,7 @@ box-shadow:  0 6px rgb(220 46 78 / 80%), inset 0 1vmin rgb(0 0 0 / 20%);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+margin-top: 100px;
 }
 
 .scissors_box{
@@ -201,6 +207,8 @@ margin-bottom: 20px;
 
 
 
+
+
     @keyframes wins {
         33% {
         
@@ -221,14 +229,21 @@ margin-bottom: 20px;
       }
 
 
-   @keyframes transistionin{
+      @media only screen and (max-width: 500px) {
+        .rock_paper{
+            flex-direction: column;
+     
+        }
+             .option_rock{
+                 margin-bottom: 50px;
+             }
+           .option_paper{
+            margin-bottom: 35px;
+           }
 
-from{
-    transform: translate(100%)
-}
+           .firstbox{
+               flex-wrap: wrap;
+               justify-content: center;
+           }
 
-to{
-    transform: translate(0%)
-}
-
-   }
+      }
