@@ -1,4 +1,3 @@
- 
 *{
     margin: 0px;
     padding: 0px;
@@ -14,7 +13,7 @@ body{
 .firstbox{
     display: flex;
     width: 50%;
-    min-width: 350px;
+    min-width: 200px;
     max-width: 700px;
     border: oldlace solid 2px;
     padding: 20px;
@@ -229,7 +228,7 @@ margin-bottom: 20px;
       }
 
 
-      @media only screen and (max-width: 500px) {
+      @media only screen and (max-width: 700px) {
         .rock_paper{
             flex-direction: column;
      
@@ -245,6 +244,24 @@ margin-bottom: 20px;
                flex-wrap: wrap;
                justify-content: center;
            }
+
+      }
+
+
+      @media only screen and (max-width: 610px) {
+      
+
+      
+.firstbox .circles_container
+{
+
+margin: 50px 0px;
+
+}
+
+.box1{
+    margin-bottom: 20px;
+}
 
       }
 
