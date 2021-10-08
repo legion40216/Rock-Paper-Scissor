@@ -1,4 +1,4 @@
-var playerwins=0;
+var plawins=0
 var cpuwins = 0;
 var wins =-1;
 var counter = document.querySelectorAll(".box2 h1");
@@ -6,7 +6,6 @@ var stat = document.querySelector(".status h1");
 var cpuChoice_Box = document.querySelector(".computer_select_box");
 var player = document.querySelector(".player_select_box")
 var wincircles = document.querySelectorAll(".circles")
-
 
 //selecting scissors rock & paper boxes
 var scissors = document.querySelector(".scissors_box");
@@ -96,29 +95,31 @@ if(num==1)
     stat.innerHTML = "TIE";
     rockclone_cpu.style.animation="wins 2s infinite";
     rockclone_player.style.animation="wins 2s infinite";
+  
 
 }
  else if( num==1 && com_choice ==2){
 
    
-    stat.innerHTML = "YOU WIN";
-      counter[1].innerHTML=playerwins+=1;
+    stat.innerHTML = "HUZZAH !";
+   
       rockclone_player.style.animation="wins 2s infinite";
 wins+=1;      
 wincircles[wins].style.backgroundColor="green";
-
+plawins+=1;
+counter[1].innerHTML=  plawins+" - "+cpuwins;    
 }
 
 
 else if( num==1 && com_choice ==0){
 
  
-    stat.innerHTML = "YOU LOSE";
-    counter[1].innerHTML=playerwins-=1;
-    paperclone_cpu.style.animation="wins 2s infinite";
+    stat.innerHTML = "YOU LOSE"
+      paperclone_cpu.style.animation="wins 2s infinite";
     cpuwins+=1;
     wins+=1;      
 wincircles[wins].style.backgroundColor="red";
+counter[1].innerHTML= plawins+" - "+cpuwins;    
 
 }
 
@@ -129,23 +130,21 @@ if(num==2)
 
 if( num==2 && com_choice ==1){
     paperclone_player.style.animation="wins 2s infinite";
-    stat.innerHTML = "YOU WIN";
-       counter[1].innerHTML=playerwins+=1;
-       console.log("hello");
+    stat.innerHTML = "HUZZAH !";
        wins+=1;      
        wincircles[wins].style.backgroundColor="green";
-
+       plawins+=1;
+       counter[1].innerHTML= plawins+" - "+cpuwins;    
 
 }
  else if( num==2 && com_choice ==2){
 
     scissorsclone_cpu.style.animation="wins 2s infinite";
-    stat.innerHTML = "YOU LOSE";
-    counter[1].innerHTML=playerwins-=1;
+    stat.innerHTML = "YOU LOSE"
     cpuwins+=1;
     wins+=1;      
     wincircles[wins].style.backgroundColor="red";
-    
+    counter[1].innerHTML= plawins+" - "+cpuwins;    
 }
 
 
@@ -154,8 +153,8 @@ else if( num==2 && com_choice ==0){
     paperclone_player.style.animation="wins 2s infinite";
     stat.innerHTML = "TIE";
     paperclone_cpu.style.animation="wins 2s infinite";
-}
 
+}
 
 }
 
@@ -167,10 +166,10 @@ if(num==3)
 
     rockclone_cpu.style.animation="wins 2s infinite";
     stat.innerHTML = "YOU LOSE";
-    counter[1].innerHTML=playerwins-=1;
     cpuwins+=1;
     wins+=1;      
     wincircles[wins].style.backgroundColor="red";
+    counter[1].innerHTML=  plawins+" - "+cpuwins;       
     
 
 }
@@ -185,17 +184,39 @@ if(num==3)
 else if( num==3 && com_choice ==0){
 
     scissorsclone_player.style.animation="wins 2s infinite";
-    stat.innerHTML = "YOU WIN";
-     counter[1].innerHTML=playerwins+=1;
+    stat.innerHTML = "HUZZAH !";
+ 
      wins+=1;      
      wincircles[wins].style.backgroundColor="green";
+     plawins+=1;
+     counter[1].innerHTML=  plawins+" - "+cpuwins;    
 }
 
 
 }
 
-console.log(num);
-console.log(com_choice);
+
+if(wins==2){
+
+    document.querySelector("button").innerText="PLAY AGAIN";
+   
+
+    if(plawins ==2 || plawins ==3 ){
+        document.querySelector(".winlose_status").innerHTML="YOU WIN BEST OF THREE";
+
+    }
+
+    
+        else if(cpuwins ==2 || cpuwins ==3 ){
+            document.querySelector(".winlose_status").innerHTML="YOU LOST BEST OF THREE";
+    
+        }
+    }
+    
+
+
+console.log( plawins);
+console.log(cpuwins);
 }
 
 
@@ -215,5 +236,9 @@ function toggledisplay(){
   paperclone_player.style.animation="";
   scissorsclone_player.style.animation="";
   scissorsclone_cpu.style.animation="";
+if(wins==2){
+    document.location.reload ()
+}
+  
 
 }
