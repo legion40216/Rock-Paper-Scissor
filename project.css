@@ -155,8 +155,10 @@ display: flex;
 justify-content: center;
 justify-content: space-evenly;
 display: none;
+flex-direction: column;
+align-items: center;
 
-margin-top: 100px;
+margin-top: 30px;
 
 }
 
@@ -205,9 +207,17 @@ font-weight: 900;
 margin-bottom: 20px;
 }
 
+.winlose_status{
+font-size: 60px;
+padding-bottom: 40px;
+}
 
-
-
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+}
 
     @keyframes wins {
         33% {
@@ -254,10 +264,18 @@ margin-bottom: 20px;
                margin-top: 50px;
            }
 
+           .container{
+           
+            flex-direction:  column;
+          
+        }
+           .box1{
+               text-align: center;
+           }
       }
 
 
-      @media only screen and (max-width: 610px) {
+      @media only screen and (max-width: 640px) {
       
 
       
@@ -273,4 +291,3 @@ margin: 50px 0px;
 }
 
       }
-
