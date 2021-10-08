@@ -202,13 +202,18 @@ if(wins==2){
    
 
     if(plawins ==2 || plawins ==3 ){
-        document.querySelector(".winlose_status").innerHTML="YOU WIN BEST OF THREE";
+        document.querySelector(".part2").style.marginTop =10;
+        document.querySelector(".winlose_status").innerHTML="YOU WIN";
+        document.querySelector(".gametype").innerHTML="BEST OF THREE";
+    
 
     }
 
     
         else if(cpuwins ==2 || cpuwins ==3 ){
-            document.querySelector(".winlose_status").innerHTML="YOU LOST BEST OF THREE";
+            document.querySelector(".part2").style.marginTop =10;
+            document.querySelector(".winlose_status").innerHTML="YOU LOSE";
+        document.querySelector(".gametype").innerHTML="BEST OF THREE";
     
         }
     }
@@ -242,4 +247,3 @@ if(wins==2){
   
 
 }
-
