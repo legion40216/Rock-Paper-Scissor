@@ -8,7 +8,7 @@
 
 body{
  height:100vh;
- background: radial-gradient( circle at top, hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+ background: radial-gradient(circle, #1f3756 50%, #141539);
 
 }
 .firstbox{
@@ -121,6 +121,7 @@ box-shadow: 0 6px rgb(236 158 14 / 80%), inset 0 1vmin rgb(0 0 0 / 20%);
 
 .option_rock:hover{
     cursor: pointer;
+    transform: scale(1.1,1.1);
 }
 
 .option_rock:active{
@@ -129,7 +130,7 @@ transform: translateY(5px);
 
 .option_paper:hover{
     cursor: pointer;
-   
+    transform: scale(1.1,1.1);
 }
 
 .option_paper:active{
@@ -139,7 +140,7 @@ transform: translateY(5px);
 
 .scissors_box:hover{
     cursor: pointer;
-
+    transform: scale(1.1,1.1);
     
 }
 
